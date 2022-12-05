@@ -1,15 +1,18 @@
 #include<stdio.h>
 
-int main (void)
+int main ()
 {
-  int a , b;
-  printf("Enter a");
-  scanf("%d",&a);
-
-  printf("Enter b");
-  scanf("%d",&b);
+  int num1 , num2 , result;
+  printf("\ncEntercthe two number");
+  scanf("%d %d",&num1,&num2);
+  result = add(num1,num2);
+  printf("\n Addition of %d and %d is %d",num1,num2,result);
   
-  printf("sum is : %d",a + b);
-  return 0;
+  return 1;
   }
-  
+  int add (int num 1, int num 2)
+{
+  int result;
+  result = num1 + num2;
+  return result;
+  }
