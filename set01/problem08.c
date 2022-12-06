@@ -1,44 +1,55 @@
-#include<stdio.h>
-#include <stdlib.h>
-int input_array_size()
+#include <stdio.h>
+
+ int input_arry_size();
+void input_arry(int n, int a[n]);
+int sum_n_arry(int n, int a[n]);
+void output(int n, int a[n],int sum);
+
+int main() 
 {
-  int a; 
-  printf("enter the total number of values entered");
-  if(scanf("%d", &a)!=1)
-  {
-    printf("error");
-    exit(0);
-  }
-  return a;
-}
-void input(int n, int arr[n])
-{
-  printf("enter the values");
-  for(int i=0;i<n;i++)
-    {
-    scanf("%d", &arr[i]);
-    }
+  int n, sum;
+  n=input_arry_size();
+  int a[n];
+  input_arry(n,a);
+  sum=sum_n_arry(n,a);
+  output(n,a,sum);
   
 }
-int sum(int n,int arr[n])
+
+int input_arry_size() 
 {
-  int sum=0;
-  for(int i=0;i<n;i++)
+  int a;
+  printf("Enter the size of the Array\n");
+    scanf("%d", &a);
+  return(a);
+}
+
+void input_arry(int n, int a[n])
+{
+  int i;
+  printf("Enter the number\n");
+  for(i = 0;i<n;i++)
     {
-      sum=sum+(int)arr[i];
+    scanf("%d", &a[i]);
     }
-  return sum;
 }
-void output( int n, int arr[n],int sum)
+
+
+int sum_n_arry(int n, int a[n]) 
 {
-  printf("%d",sum);
+  int sum = 0,i;
+  for(i = 0;i<n;i++)
+  {
+    sum = sum+a[i];
+  }
+  return(sum);
 }
-int main()
+void output(int n, int a[n],int sum)
 {
-  int p=input_array_size();
-  int b[p];
-  input(p,b);
-  int r=sum(p,b);
-  output(p,b,r);
-  return 0;
+  int i;
+  for(i = 0;i<n-1;i++)
+  {
+    printf("%d + " , a[i]);
+  }
+  printf("%d = %d",a[n-1],sum);
 }
