@@ -8,7 +8,8 @@ int main() {
   int a, b, sum;
   a = input();
   b = input();
-  add(a,b,sum);
+  add(a,b,&sum);
+  output(a,b,sum);
   return 0;
 }
 
