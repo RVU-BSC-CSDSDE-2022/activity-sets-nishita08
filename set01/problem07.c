@@ -1,33 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
-int input()
-{
- int v;
-  printf("enter the numbers");
-   if( scanf("%d", &v)!=1)
-   {
-     printf("error");
-     exit(0);
-   }
-  return v;
-}
-int sum(int n)
-{
 
- n=(n*(n+1))/2;//use for loop
-  return n;
-
-}
-
-void output(int n, int add)
-{
- printf("sum of n numbers is %d", add); //1+2+3+...+n = sum.
-}
+int input();
+int sum_n_nos(int n);
+void output(int n , int sum);
 
 int main()
-{int a=input();
-  int c;
-   c=sum(a);
- output(a,c);
- return 0;
+{
+  int n,sum=0;
+  n=input();
+  sum=sum_n_nos(n);
+  output(n, sum);
+  return 0;
+}
+int input()
+{
+  int n;
+  printf("Enter the range of natural numbers to add\n");
+  scanf("%d", &n);
+  return n;
+}
+
+int sum_n_nos(int n)
+{
+  int sum=0;
+  for(int i=1; i<=n; i++)
+    {
+       sum=sum+i;
+    }
+  return sum;
+}
+
+void output(int n, int sum)
+{
+  printf("The sum of %d natural numbers is %d\n", n, sum);
 }

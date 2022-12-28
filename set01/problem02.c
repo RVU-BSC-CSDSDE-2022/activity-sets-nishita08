@@ -5,6 +5,6 @@ int main()
   int x = 10;
   int y = 20;
 int sum = x + y;
-  printf("The sum of %d and %d is %d",x,y,sum);
+  printf("The sum of %d and %d is %d\n",x,y,sum);
   return 0;
   }
