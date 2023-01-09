@@ -1,6 +1,6 @@
 #include <stdio.h>
 
- int input_arry_size();
+int input_arry_size();
 void input_arry(int n, int a[n]);
 int sum_n_arry(int n, int a[n]);
 void output(int n, int a[n],int sum);
