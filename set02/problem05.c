@@ -18,11 +18,7 @@ int input()
 {
   int x;
   printf("Enter the number\n");
-  if(scanf("%d",&x)!=1)
-  {
-    printf("Error");
-    exit(0);
-  }
+  scanf("%d",&x);
   return(x);
 }
 int find_gcd(int a, int b)
