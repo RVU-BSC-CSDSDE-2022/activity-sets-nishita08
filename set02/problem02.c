@@ -32,7 +32,7 @@ void output(int a, int b, int c, int isscalene) {
  if (isscalene==1)
    printf("The triangle with sides %d,%d and %d is a scalene triangle\n",a,b,c,isscalene);
     
-  if (isscalene==0)
+  else
   printf("The triangle with the sides %d,%d and %d is not a scalene triangle\n",a,b,c,isscalene);
     
 }
