@@ -14,7 +14,7 @@ int main ()
 
 input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3)
 {
-   printf("Enter x1 and y1\n");
+  printf("Enter x1 and y1\n");
   scanf("%f%f",x1,y1);
   printf("Enter x2 and y2\n");
   scanf("%f%f",x2,y2);
