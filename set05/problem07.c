@@ -1,4 +1,4 @@
-#include <stdio.h>
++#include <stdio.h>
 #include <string.h>
 void input(char *name);
 int has_nice_name(char *c);
